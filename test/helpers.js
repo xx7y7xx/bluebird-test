@@ -1,15 +1,6 @@
 import test from "ava";
 import Promise from "bluebird";
-import { getDirFilesContent, getDirFiles } from "./helpers.js";
-
-test("foo", t => {
-  t.pass();
-});
-
-test("bar", async t => {
-  const bar = Promise.delay(1000).then(() => "bar");
-  t.is(await bar, "bar");
-});
+import { getDirFilesContent, getDirFiles } from "../helpers.js";
 
 test("getDirFiles()", async t => {
   t.deepEqual(await getDirFiles(), ["foo.txt", "bar.txt"]);
